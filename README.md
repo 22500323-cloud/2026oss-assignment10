@@ -1,191 +1,29 @@
-# 🌟 Habit Tracker Web App
-
-A beautiful, modern web application to track your daily habits with gamification elements, built with React and Vite. All data is stored locally in your browser using localStorage, ensuring privacy and offline functionality.
-
-🌐 **[Live Demo](https://theunknown550.github.io/Habit-Tracker-Web-App/)** - Try it now!
-
-![Habit Tracker Demo](./demo.gif) <!-- Placeholder for demo GIF -->
-
-## 📋 Table of Contents
-
-- [✨ Features](#-features)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [🚀 Quick Start](#-quick-start)
-- [📚 Documentation](#-documentation)
-- [🌐 Deployment](#-deployment)
-- [🎮 Usage](#-usage)
-- [📈 Gamification Features](#-gamification-features)
-- [🏗️ Project Structure](#️-project-structure)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-- [🙏 Acknowledgements](#-acknowledgements)
-
-## ✨ Features
-
-- **🎨 Beautiful UI**: Modern design with gradients, animations, and smooth transitions
-- **🎯 Add, Edit, and Delete Habits**: Easily manage your habit list with an intuitive interface
-- **✅ Daily Checklist**: Interactive habit completion with celebratory animations
-- **🔥 Streak Tracking**: View your current streak for each habit with achievement badges
-- **📊 Progress Visualization**: Animated progress bar with color-coded completion levels
-- **📅 Calendar View**: Monthly calendar showing habit completion history with visual indicators
-- **📈 Statistics Dashboard**: Comprehensive analytics including completion rates, top habits, and progress charts
-- **💾 Data Management**: Export/import habit data and clear all data with backup functionality
-- **🎉 Motivational Messages**: Dynamic encouragement based on your progress percentage
-- **🎭 Random Icons**: Each habit gets a fun emoji icon for better visual organization
-- **💾 Local Storage**: All data persists between sessions without needing a backend
-- **📱 Responsive Design**: Works seamlessly on desktop and mobile devices
-- **⚡ Smooth Animations**: Fade-in effects, hover animations, and completion celebrations
-
-## Tech Stack
-
-- **Frontend**: React 19.1.1 with Vite for fast development and building
-- **Styling**: TailwindCSS 4.1.14 for modern, utility-first CSS with custom animations
-- **Data Storage**: Browser localStorage (no backend required)
-- **Language**: JavaScript (ES6+)
-- **Icons**: Unicode emojis for cross-platform compatibility
-
-## 🚀 Quick Start
-
-Get started with the Habit Tracker in just a few minutes!
-
-```bash
-git clone https://github.com/TheUnknown550/Habit-Tracker-Web-App.git
-cd Habit-Tracker-Web-App
-npm install
-npm run dev
-```
-
-Then open `http://localhost:5173` in your browser.
-
-📖 **Detailed Installation Guide**: See [INSTALLATION.md](INSTALLATION.md) for comprehensive setup instructions, troubleshooting, and alternative installation methods.
-
-## 📚 Documentation
-
-- **[INSTALLATION.md](INSTALLATION.md)** - Complete installation and setup guide
-- **[README.md](README.md)** - Project overview, features, and usage (this file)
-
-## 🌐 Deployment
-
-This app is automatically deployed to GitHub Pages using GitHub Actions.
-
-**Live Demo**: [https://theunknown550.github.io/Habit-Tracker-Web-App/](https://theunknown550.github.io/Habit-Tracker-Web-App/)
-
-### Automatic Deployment
-
-Every push to the `main` branch triggers an automatic deployment:
-1. GitHub Actions builds the app using `npm run build`
-2. The built files are deployed to GitHub Pages
-3. Your site is live within 2-3 minutes!
-
-### Manual Deployment
-
-You can also trigger a deployment manually:
-1. Go to the **Actions** tab in your GitHub repository
-2. Select the **Deploy to GitHub Pages** workflow
-3. Click **Run workflow**
-
-### Setup GitHub Pages (First Time)
-
-If you fork this repository, enable GitHub Pages:
-1. Go to your repository **Settings**
-2. Navigate to **Pages** (under "Code and automation")
-3. Under **Source**, select **GitHub Actions**
-4. The next push to `main` will deploy automatically!
-
-See [INSTALLATION.md](INSTALLATION.md#deploying-to-github-pages) for more deployment options.
-
-## 🎮 Usage
-
-The app features four main sections accessible via the navigation tabs at the top:
-
-### 🎯 Habits Tab
-1. **Adding a Habit**: Use the beautiful "Add New Habit" form to create a new habit. Each habit automatically gets a fun emoji icon!
-
-2. **Tracking Progress**: Click the circular icon next to each habit to mark it as completed. Watch the celebratory animation and see your progress bar update in real-time!
-
-3. **Viewing Streaks**: See your current streak displayed below each habit name. Earn achievement badges for 7+ day and 30+ day streaks! 🔥⭐👑
-
-4. **Editing Habits**: Click the "✏️ Edit" button next to a habit to modify its name or description.
-
-5. **Deleting Habits**: Click the "🗑️ Delete" button to remove a habit from your list.
-
-### 📅 Calendar Tab
-- View your habit completion history in a monthly calendar format
-- Green dots: All habits completed that day
-- Yellow dots: Some habits completed that day
-- Gray dots: No habits completed that day
-- Navigate between months and jump back to today
-
-### 📊 Statistics Tab
-- **Key Metrics**: Total habits, active habits, longest streak, monthly completion rate
-- **Top Performing Habits**: See which habits you complete most consistently
-- **Progress Charts**: Visual representation of your last 14 days of habit completion
-
-### 💾 Data Tab
-- **Export Data**: Download your habits and progress as a JSON backup file
-- **Import Data**: Upload a previously exported backup to restore your data
-- **Clear All Data**: Permanently remove all habits and completion history
-
-## 📈 Gamification Features
-
-- **🎯 Achievement Badges**: Special indicators for impressive streaks
-- **🎨 Dynamic Progress Colors**: Progress bar changes color based on completion percentage
-- **✨ Celebration Animations**: Satisfying animations when completing habits
-- **💬 Motivational Messages**: Context-aware encouragement throughout your journey
-- **🎭 Visual Icons**: Each habit gets a unique emoji for better visual organization
-
-## Project Structure
-
-```
-src/
-├── components/
-│   ├── AddHabitForm.jsx       # Form for adding new habits
-│   ├── CalendarView.jsx       # Monthly calendar with completion history
-│   ├── DataExport.jsx         # Data management (export/import/clear)
-│   ├── HabitItem.jsx          # Individual habit component
-│   ├── HabitList.jsx          # List of all habits
-│   ├── ProgressBar.jsx        # Daily progress visualization
-│   └── StatisticsDashboard.jsx # Analytics and statistics
-├── hooks/
-│   └── useLocalStorage.js     # Custom hook for localStorage persistence
-├── App.jsx                    # Main application with tab navigation
-├── index.css                  # Global styles with Tailwind imports
-└── main.jsx                   # Application entry point
-public/                        # Static assets (currently empty)
-```
-
-## Contributing
-
-Contributions are welcome! This project is open-source and beginner-friendly. Here's how you can contribute:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature-name`
-3. Make your changes and test them
-4. Commit your changes: `git commit -m 'Add some feature'`
-5. Push to the branch: `git push origin feature/your-feature-name`
-6. Open a Pull Request
-
-### Ideas for Contributions
-
-- **🌙 Dark Mode**: Toggle between light and dark themes for better user experience
-- **� PWA Features**: Progressive Web App capabilities for mobile installation
-- **🔔 Browser Notifications**: Optional reminders for habit completion times
-- **📊 Advanced Analytics**: Trend analysis, habit correlations, and predictive insights
-- **� Habit Categories**: Group habits by categories (Health, Productivity, Learning, etc.)
-- **📤 Data Export Options**: Export to CSV, PDF reports, or shareable formats
-- **🔄 Habit Templates**: Pre-built habit collections for common goals
-- **👥 Social Features**: Share achievements and compete with friends
-- **🎵 Sound Effects**: Customizable audio feedback for habit completions
-- **� Weekly/Monthly Goals**: Set and track completion targets
-- **🔥 Streak Challenges**: Community challenges and streak competitions
-- **� Habit Insights**: AI-powered suggestions for habit improvement
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- Built with [Vite](https://vitejs.dev/) and [React](https://react.dev/)
-- Styled with [TailwindCSS](https://tailwindcss.com/)
-- Inspired by various habit tracking apps for a simple, effective approach
+1. 프로젝트 제목 : Habit tracker web app
+2. 프로젝트 소개 : 일상 속에서 습관을 기록하고 관리하는 웹 사이트이다. 습관 추가, 달력, 통계, 진행률을 확인할 수 있는 기능들이 있다.
+3. 선택 이유 : 일상 생활에서 습관 형성과 자기 관리가 중요하다고 생각하는 도중 React와 JavaScript를 활용한 프로젝트라 수업에서 배운 내용을 적용하기 좋다고 생각해서 선택하게 되었다.
+4. 원본 GitHub URL 및 라이선스 : https://github.com/TheUnknown550/Habit-Tracker-Web-App.git
+5. Installation: [Installation.png]
+6. 주요 파일, 컴포넌트
+- App.jsx : 전체 화면을 구성하고 주요 기능을 관리한다
+- AddHabitForm.jsx : 새로운 습관을 추가하는 기능 
+- HabitList.jsx : 등록한 습관 목록을 표시
+- HabitItem.jsx : 각각의 습관 정보와 완료 표시
+- ProgressBar.jsx : 습관을 완료한 갯수와 달성률 표시
+- CalendarView.jsx : 날짜별 습관 기록 
+- StatisticsDashboard.jsx : 습관 실천 통계
+- DataExport.jsx : 데이터 내보내기
+- useLocalStorage.jsx : 브라우저 LocalSrotage에 데이터를 저장하고 불러오기
+- index.css : 전체적인 스타일과 움직이는 효과
+- main.jsx : React 앱을 HTML 화면에 연결
+7. 수정한 3가지 내용
+- text : 한국어 문구 변경
+- style : 파랑 게열 -> 민트, 그린 계열 배경 색상 변경
+- UI/Data : 습관 진행 현황과 달성률을 한 눈에 확인할 수 있도록 변경함
+8. Vercel URL : https://2026oss-assignment10.vercel.app/
+9. 새롭게 배운 내용 3가지 
+- 하나의 화면을 여러 컴포넌트로 나누어 구성하는 방법과 컴포넌트 사이에 데이터를 전달하는 방법
+- LocalStorage를 활용하면 서버 없이 데이터를 저장하고 새로고침한 후에도 데이터를 유지 할 수 있다
+- 배경색, 글자색, 버튼 디자인을 수정하고 전체적인 화면의 분위기를 바꾸는 방법
+10. 어려웠던 점과 해결 방법 : 달성률 대시보드를 수정하는 과정에서 remaining is not defined 오류가 발생했다. 원인을 살펴보니 남은 습관의 개수를 계산하는 변수를 선언하지 않았었다. 전체 습관 개수에서 완료한 습관의 개수를 빼서 remaining 변수를 선언하였다
+11. AI활용 내용 및 느낀 점 : React 코드의 구조와 기능을 이해하는 데, 오류 메시지의 원인을 파악하고 해결법을 찾는 데, 기존 css와 Tailwind css 코드를 분석하고 원하는 디자인인 민트와 그린 계열로 변경하는 과정에서 활용하였다.
+AI를 활용하면서 원하는 디자인을 구현하는데에 쉽게 도움을 받을 수 있지만 코드를 직접 확인하고 실행하면서 결과를 이해하는 과정이 중요하다는것을 깨달았다.
