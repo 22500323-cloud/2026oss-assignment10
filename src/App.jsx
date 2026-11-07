@@ -56,18 +56,18 @@ function App() {
 
   const getMotivationalMessage = () => {
     const percentage = habits.length > 0 ? Math.round((completedToday / habits.length) * 100) : 0;
-    if (percentage === 100 && habits.length > 0) return "🎉 Amazing! All habits completed today!";
-    if (percentage >= 75) return "🚀 Great progress! Keep it up!";
-    if (percentage >= 50) return "💪 You're doing well! Stay consistent!";
-    if (percentage >= 25) return "🌟 Good start! Every step counts!";
-    return "🌱 Every journey begins with a single step!";
+    if (percentage === 100 && habits.length > 0) return "🎉 오늘의 습관을 모두 완료했어요 !";
+    if (percentage >= 75) return "🚀 정말 잘하고 있어요. 조금만 더 힘내봐요!";
+    if (percentage >= 50) return "💪 절반 이상 달성했어요. 마지막까지 화이팅!";
+    if (percentage >= 25) return "🌟 좋은 시작이에요 !";
+    return "🌱 작은 습관부터 하나씩 시작해봐요 !";
   };
 
   const tabs = [
-    { id: 'habits', label: 'Habits', icon: '🎯' },
-    { id: 'calendar', label: 'Calendar', icon: '📅' },
-    { id: 'statistics', label: 'Statistics', icon: '📊' },
-    { id: 'data', label: 'Data', icon: '💾' },
+    { id: 'habits', label: '습관목록', icon: '🎯' },
+    { id: 'calendar', label: '달력', icon: '📅' },
+    { id: 'statistics', label: '통계', icon: '📊' },
+    { id: 'data', label: '데이터', icon: '💾' },
   ];
 
   return (
@@ -75,7 +75,7 @@ function App() {
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-8 animate-fade-in-up">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
-            🌟 Habit Tracker
+            🌟 습관 기록장
           </h1>
           <p className="text-gray-600 text-lg">{getMotivationalMessage()}</p>
         </div>
@@ -132,8 +132,8 @@ function App() {
         {habits.length === 0 && activeTab === 'habits' && (
           <div className="text-center mt-12 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <div className="text-6xl mb-4 animate-pulse-gentle">🎯</div>
-            <h3 className="text-xl font-semibold text-gray-700 mb-2">Ready to build better habits?</h3>
-            <p className="text-gray-500">Start by adding your first habit above!</p>
+            <h3 className="text-xl font-semibold text-gray-700 mb-2">오늘부터 좋은 습관을 만들어 볼까요 ?</h3>
+            <p className="text-gray-500">첫 번째 습관을 추가해보세요 !</p>
           </div>
         )}
       </div>
