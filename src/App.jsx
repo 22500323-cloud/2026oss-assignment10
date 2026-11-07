@@ -71,10 +71,10 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 py-8">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-8 animate-fade-in-up">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent mb-2">
             🌟 습관 기록장
           </h1>
           <p className="text-gray-600 text-lg">{getMotivationalMessage()}</p>
@@ -89,7 +89,7 @@ function App() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex-1 py-3 px-4 rounded-lg font-medium transition-all duration-200 ${
                   activeTab === tab.id
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-md transform scale-105'
+                    ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-md transform scale-105'
                     : 'text-gray-600 hover:bg-gray-100'
                 }`}
               >
